@@ -18,6 +18,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background: var(--Off-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: var(--White);
+}
+
 .inputAge {
   margin: 50px;
   display: flex;
@@ -54,7 +65,6 @@ input::-moz-placeholder {
   padding: 10px;
   font-weight: bold;
   text-align: center;
-  margin-left: 10px;
 }
 
 .label {
@@ -63,4 +73,14 @@ input::-moz-placeholder {
   color: var(--Smokey-grey);
   margin-bottom: 5px;
   letter-spacing: 5px;
+}
+
+.calculateButton {
+  position: absolute;
+  bottom: 10px;
+  width: 70px;
+  height: 70px;
+  background-image: linear-gradient(to right, var(--Purple), var(--Light-red));
+  border-radius: 50%;
+  border: none;
 }

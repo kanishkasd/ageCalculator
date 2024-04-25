@@ -1,3 +1,4 @@
+import buttonIcon from "../assets/images/icon-arrow.svg";
 const AgeInputSection = () => {
   return (
     <>
@@ -42,7 +43,11 @@ const AgeInputSection = () => {
             required
           />
         </div>
+        <button className="calculateButton" type="button">
+          <img src={buttonIcon} alt="button-icon" />
+        </button>
       </form>
+      <hr className="hr" />
     </>
   );
 };
