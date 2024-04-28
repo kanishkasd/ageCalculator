@@ -40,8 +40,10 @@ body {
   width: 100px;
   height: 50px;
   font-size: 30px;
+  font-weight: bold;
   border: 1px solid var(--Smokey-grey);
   border-radius: 5px;
+  text-align: center;
 }
 
 .form-row {

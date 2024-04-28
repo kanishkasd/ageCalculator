@@ -1,5 +1,5 @@
 import buttonIcon from "../assets/images/icon-arrow.svg";
-const AgeInputSection = () => {
+const AgeInputSection = ({ ageInputs, onInputChange, onSubmit }) => {
   return (
     <>
       <form className="inputAge">
@@ -12,6 +12,8 @@ const AgeInputSection = () => {
             className="inputField"
             id="day"
             name="day"
+            value={ageInputs.day}
+            onChange={(e) => setAgeInputs(e.target.value)}
             placeholder="DD"
             required
           />
