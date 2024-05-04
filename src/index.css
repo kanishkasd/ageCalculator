@@ -92,8 +92,32 @@ input::-moz-placeholder {
   cursor: pointer;
 }
 
+.calculateButton:hover {
+  background: var(--Off-black);
+}
+
 .hr {
   opacity: 0.5;
   margin-left: 50px;
   margin-right: 120px;
+}
+
+.viewSection {
+  margin: 20px 0px 0px 40px;
+}
+
+.displayWords {
+  font-size: 3.5rem;
+  font-style: italic;
+}
+
+.displayAge {
+  font-size: 3.5rem;
+  color: #ab00ff;
+  font-style: italic;
+  margin-right: 10px;
+}
+
+.hidden {
+  display: none;
 }

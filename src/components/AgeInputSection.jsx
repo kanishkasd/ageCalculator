@@ -1,8 +1,18 @@
+import { useState } from "react";
 import buttonIcon from "../assets/images/icon-arrow.svg";
-const AgeInputSection = ({ ageInputs, onInputChange, onSubmit }) => {
+const AgeInputSection = ({ onSubmit }) => {
+  const [day, setDay] = useState("");
+  const [year, setYear] = useState("");
+  const [month, setMonth] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit({ day, year, month });
+  };
+
   return (
     <>
-      <form className="inputAge">
+      <form className="inputAge" onSubmit={handleSubmit}>
         <div className="form-row">
           <label htmlFor="day" className="label">
             DAY
@@ -12,8 +22,8 @@ const AgeInputSection = ({ ageInputs, onInputChange, onSubmit }) => {
             className="inputField"
             id="day"
             name="day"
-            value={ageInputs.day}
-            onChange={(e) => setAgeInputs(e.target.value)}
+            value={day}
+            onChange={(e) => setDay(e.target.value)}
             placeholder="DD"
             required
           />
@@ -29,6 +39,8 @@ const AgeInputSection = ({ ageInputs, onInputChange, onSubmit }) => {
             className="inputField"
             name="month"
             placeholder="MM"
+            value={month}
+            onChange={(e) => setMonth(e.target.value)}
             required
           />
         </div>
@@ -42,10 +54,16 @@ const AgeInputSection = ({ ageInputs, onInputChange, onSubmit }) => {
             className="inputField"
             name="year"
             placeholder="YYYY"
+            value={year}
+            onChange={(e) => setYear(e.target.value)}
             required
           />
         </div>
-        <button className="calculateButton" type="button">
+        <button
+          className="calculateButton"
+          type="button"
+          onClick={handleSubmit}
+        >
           <img src={buttonIcon} alt="button-icon" />
         </button>
       </form>
