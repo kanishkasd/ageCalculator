@@ -28,6 +28,7 @@ body {
 .container {
   background: var(--White);
   border-radius: 20px 20px 100px 20px;
+  margin: 100px 0;
 }
 
 .inputAge {
@@ -82,7 +83,7 @@ input::-moz-placeholder {
 
 .calculateButton {
   position: absolute;
-  top: 140px;
+  top: 210px;
   right: 530px;
   width: 70px;
   height: 70px;
@@ -120,4 +121,66 @@ input::-moz-placeholder {
 
 .hidden {
   display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    max-width: 70%;
+    padding: 10px;
+    margin: 100px auto;
+    padding-bottom: 30px;
+    padding-right: 20px;
+  }
+
+  .calculateButton {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 225px;
+    left: 45%;
+  }
+
+  .buttonIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .displayWords {
+    font-size: 2.5rem;
+  }
+  .displayAge {
+    font-size: 2.5rem;
+    margin-right: 10px;
+  }
+  .inputField {
+    width: 70px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid var(--Smokey-grey);
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .inputAge {
+    margin-left: 20px;
+    padding-right: 100px;
+  }
+  .form-row {
+    padding: 10px;
+  }
+  input::-moz-placeholder {
+    font-size: 15px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .label {
+    font-size: 10px;
+  }
+
+  .hr {
+    margin: 0;
+    margin: 0 10px 0 10px;
+  }
 }

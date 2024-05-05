@@ -64,7 +64,7 @@ const AgeInputSection = ({ onSubmit }) => {
           type="button"
           onClick={handleSubmit}
         >
-          <img src={buttonIcon} alt="button-icon" />
+          <img className="buttonIcon" src={buttonIcon} alt="button-icon" />
         </button>
       </form>
       <hr className="hr" />

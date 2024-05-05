@@ -10,8 +10,10 @@ function App() {
   };
   return (
     <>
-      <AgeInputSection onSubmit={handleSubmit} />
-      <ViewAge age={age} />
+      <div className="container">
+        <AgeInputSection onSubmit={handleSubmit} />
+        <ViewAge age={age} />
+      </div>
     </>
   );
 }
